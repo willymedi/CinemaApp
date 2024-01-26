@@ -10,5 +10,7 @@ namespace CinemaApp.Services
 
         bool postSeat(SeatEntity seat);
 
+        SeatEntity? getSeatById(int seatId);
+
     }
 }

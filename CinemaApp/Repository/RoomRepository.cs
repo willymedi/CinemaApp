@@ -18,5 +18,15 @@ namespace CinemaApp.Repository
             return true;
 
         }
+
+        public IEnumerable<RoomEntity> GetAll()
+        {
+            return _context.Room.Where(room => room.Status).ToArray();
+        }
+
+        public RoomEntity? Get(int id)
+        {
+            return _context.Room.Find(id);
+        }
     }
 }

@@ -29,5 +29,10 @@ namespace CinemaApp.Services
         {
             return _seatRepository.saveSeat(seat);
         }
+
+        public SeatEntity? getSeatById(int seatId)
+        {
+            return _seatRepository.findSeatById(seatId);
+        }
     }
 }

@@ -22,5 +22,10 @@ namespace CinemaApp.Repository
             _context.SaveChanges();
             return true;
         }
+
+        public SeatEntity? findSeatById(int id)
+        {
+            return _context.Seatings.Find(id);
+        }
     }
 }

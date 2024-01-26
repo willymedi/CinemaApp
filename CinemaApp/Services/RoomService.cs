@@ -16,5 +16,15 @@ namespace CinemaApp.Services
         {
             return _roomRepository.saveRoom(room);
         }
+
+        public IEnumerable<RoomEntity> GetAllRooms()
+        {
+            return _roomRepository.GetAll();
+        }
+
+        public RoomEntity? GetRoomById(int id)
+        {
+            return _roomRepository.Get(id);
+        }
     }
 }
